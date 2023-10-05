@@ -21,7 +21,8 @@ npm install
 
 2. Crie o arquivo .env e altere as variáveis ambiente de acordo com a configuração do Neon
 
-3. ```console
+3.  Execute o comando abaixo:
+```console
 npm run start
 ```
 
