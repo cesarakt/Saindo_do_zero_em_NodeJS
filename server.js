@@ -39,6 +39,7 @@ server.get('/videos', async (request) => {
     return videos
 })
 
+//Rota para atualizar os vídeos
 server.put('/videos/:id', async (request, reply) => {
     const videoId = request.params.id 
     const { title, description, duration } = request.body
@@ -52,6 +53,7 @@ server.put('/videos/:id', async (request, reply) => {
     return reply.status(204).send()
 })
 
+//Rota para deletar os vídeos
 server.delete('/videos/:id', async (request, reply) => {
     const videoId = request.params.id
 
@@ -61,5 +63,5 @@ server.delete('/videos/:id', async (request, reply) => {
 })
 
 server.listen({
-    port: 3333
+    port: process.env.PORT ?? 3333
 })
