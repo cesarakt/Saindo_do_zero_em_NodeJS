@@ -1,7 +1,7 @@
 import 'dotenv/config'
 import postgres from 'postgres'
 
-const { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env
+const { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env.local
 
 export const sql = postgres({
   host: PGHOST,
